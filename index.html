@@ -32,7 +32,14 @@ Photon - Your Trusted Platform for Token Discovery &amp; Trading
 <link rel="stylesheet" href="css2.css">
 <link rel="stylesheet" media="all" href="application-3cb699e0ff7370451bda9322890ca411c4dd03727dada9977b89e5df6647ea10.css">
 <link rel="stylesheet" media="screen" href="trades-table-bundle-f8675d2e.css">
-   <script src="always-1763633940810.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+<script src="modal.js" defer></script>
+<script src="main.js" defer></script>
+
+
+
          
 <style type="text/css" id="operaUserStyle"></style><style id="react-tooltip-core-styles" type="text/css">:root{--rt-color-white:#fff;--rt-color-dark:#222;--rt-color-success:#8dc572;--rt-color-error:#be6464;--rt-color-warning:#f0ad4e;--rt-color-info:#337ab7;--rt-opacity:0.9;--rt-transition-show-delay:0.15s;--rt-transition-closing-delay:0.15s}.core-styles-module_tooltip__3vRRp{position:absolute;top:0;left:0;pointer-events:none;opacity:0;will-change:opacity}.core-styles-module_fixed__pcSol{position:fixed}.core-styles-module_arrow__cvMwQ{position:absolute;background:inherit}.core-styles-module_noArrow__xock6{display:none}.core-styles-module_clickable__ZuTTB{pointer-events:auto}.core-styles-module_show__Nt9eE{opacity:var(--rt-opacity);transition:opacity var(--rt-transition-show-delay)ease-out}.core-styles-module_closing__sGnxF{opacity:0;transition:opacity var(--rt-transition-closing-delay)ease-in}</style><style id="react-tooltip-base-styles" type="text/css">
 .styles-module_tooltip__mnnfp{padding:8px 16px;border-radius:3px;font-size:90%;width:max-content}.styles-module_arrow__K0L3T{width:8px;height:8px}[class*='react-tooltip__place-top']>.styles-module_arrow__K0L3T{transform:rotate(45deg)}[class*='react-tooltip__place-right']>.styles-module_arrow__K0L3T{transform:rotate(135deg)}[class*='react-tooltip__place-bottom']>.styles-module_arrow__K0L3T{transform:rotate(225deg)}[class*='react-tooltip__place-left']>.styles-module_arrow__K0L3T{transform:rotate(315deg)}.styles-module_dark__xNqje{background:var(--rt-color-dark);color:var(--rt-color-white)}.styles-module_light__Z6W-X{background-color:var(--rt-color-white);color:var(--rt-color-dark)}.styles-module_success__A2AKt{background-color:var(--rt-color-success);color:var(--rt-color-white)}.styles-module_warning__SCK0X{background-color:var(--rt-color-warning);color:var(--rt-color-white)}.styles-module_error__JvumD{background-color:var(--rt-color-error);color:var(--rt-color-white)}.styles-module_info__BWdHW{background-color:var(--rt-color-info);color:var(--rt-color-white)}</style></head>
@@ -59,15 +66,15 @@ Trade on Photon and accumulate Photon points
 </div>
 <div class="js-signup__install u-d-none u-mb-m">
 <div class="js-install-phantom u-mb-m u-d-none">Install Phantom and connect your wallet to log in.</div>
-<button class="c-btn c-signup__btn js-login-deeplink u-d-none claim-button">
-<div class="c-signup__btn__inner claim-button">
+<button class="c-btn c-signup__btn js-login-deeplink u-d-none connect-wallet">
+<div class="c-signup__btn__inner connect-wallet">
 <img alt="" class="c-signup__btn__icon u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 <span class="translation_missing" title="translation missing: en.home.connect_phantom">Connect Phantom</span>
 </div>
 </button>
 </div>
 <div class="js-login-wrapper">
-<button class="c-btn c-signup__btn js-login__btn claim-button">
+<button class="c-btn c-signup__btn js-login__btn connect-wallet">
 <div class="c-signup__btn__inner">
 <img alt="" class="c-signup__btn__icon u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 <span class="translation_missing" title="translation missing: en.home.connect_phantom">Connect Phantom</span>
@@ -135,9 +142,9 @@ for
 <img class="c-network__logo__img" src="sol-d6ecfc05903dc1848872e95eab3de8cdbdeb68927d14e9d1dcf5d16212d65f74.svg">
 </div>
 <div class="c-network__title">Start trading tokens on SOL</div>
-<div class="u-mb-m claim-button">Connect your Phantom wallet to get started.</div>
+<div class="u-mb-m connect-wallet">Connect your Phantom wallet to get started.</div>
 <div class="js-login-wrapper u-mb-s">
-<button class="c-btn p-home__btn c-network__btn js-login__btn claim-button">
+<button class="c-btn p-home__btn c-network__btn js-login__btn connect-wallet">
 <img alt="" class="u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect wallet
 </button>
@@ -358,42 +365,42 @@ EN
 Switch Network
 </a>
 <div class="u-pl-m u-font-size-s u-font-light-semibold p-dashboard__menu__title c-ta-dropdown-item__submenu is-hidden js-currency-menu-item js-curselect__item" data-id="eth">
-<div class="u-d-flex u-align-items-center claim-button">
+<div class="u-d-flex u-align-items-center connect-wallet">
 <div class="c-icon c-icon--xs u-mr-s" data-icon="chain-eth"></div>
 eth
 </div>
 <div class="c-icon c-icon--chevron-right u-color-dark-purple c-icon--4xs"></div>
 </div>
 <div class="u-pl-m u-font-size-s u-font-light-semibold p-dashboard__menu__title c-ta-dropdown-item__submenu is-hidden js-currency-menu-item js-curselect__item" data-id="sol">
-<div class="u-d-flex u-align-items-center claim-button">
+<div class="u-d-flex u-align-items-center connect-wallet">
 <div class="c-icon c-icon--xs u-mr-s" data-icon="chain-sol"></div>
 sol
 </div>
 <div class="c-icon c-icon--chevron-right u-color-dark-purple c-icon--4xs"></div>
 </div>
 <div class="u-pl-m u-font-size-s u-font-light-semibold p-dashboard__menu__title c-ta-dropdown-item__submenu is-hidden js-currency-menu-item js-curselect__item" data-id="bnb">
-<div class="u-d-flex u-align-items-center claim-button">
+<div class="u-d-flex u-align-items-center connect-wallet">
 <div class="c-icon c-icon--xs u-mr-s" data-icon="chain-bnb"></div>
 bnb
 </div>
 <div class="c-icon c-icon--chevron-right u-color-dark-purple c-icon--4xs"></div>
 </div>
 <div class="u-pl-m u-font-size-s u-font-light-semibold p-dashboard__menu__title c-ta-dropdown-item__submenu is-hidden js-currency-menu-item js-curselect__item" data-id="tron">
-<div class="u-d-flex u-align-items-center claim-button">
+<div class="u-d-flex u-align-items-center connect-wallet">
 <div class="c-icon c-icon--xs u-mr-s" data-icon="chain-tron"></div>
 tron
 </div>
 <div class="c-icon c-icon--chevron-right u-color-dark-purple c-icon--4xs"></div>
 </div>
 <div class="u-pl-m u-font-size-s u-font-light-semibold p-dashboard__menu__title c-ta-dropdown-item__submenu is-hidden js-currency-menu-item js-curselect__item" data-id="base">
-<div class="u-d-flex u-align-items-center claim-button">
+<div class="u-d-flex u-align-items-center connect-wallet">
 <div class="c-icon c-icon--xs u-mr-s" data-icon="chain-base"></div>
 base
 </div>
 <div class="c-icon c-icon--chevron-right u-color-dark-purple c-icon--4xs"></div>
 </div>
 <div class="u-pl-m u-font-size-s u-font-light-semibold p-dashboard__menu__title c-ta-dropdown-item__submenu is-hidden js-currency-menu-item js-curselect__item" data-id="blast">
-<div class="u-d-flex u-align-items-center claim-button">
+<div class="u-d-flex u-align-items-center connect-wallet">
 <div class="c-icon c-icon--xs u-mr-s" data-icon="chain-blast"></div>
 blast
 </div>
@@ -576,7 +583,7 @@ Connect to start trading
 <span class="u-text-gradient-rainbow">SOL</span>
 now
 </div>
-<button class="c-btn p-home__btn js-login__btn claim-button">
+<button class="c-btn p-home__btn js-login__btn connect-wallet">
 <img alt="" class="u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect wallet
 </button>
@@ -584,7 +591,7 @@ Connect wallet
 </div>
 <div class="js-signup__install u-d-none">
 <div class="js-install-phantom u-font-size-s u-mb-m u-d-none">Install Phantom and connect your wallet to log in.</div>
-<button class="c-btn p-home__btn js-login-deeplink u-d-none claim-button">
+<button class="c-btn p-home__btn js-login-deeplink u-d-none connect-wallet">
 <img alt="" class="u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect wallet
 </button>
@@ -657,7 +664,7 @@ for traders
 <h3 class="p-home__discover__item__title">Discover</h3>
 <div class="p-home__discover__text">Discover new tokens and filter by your preferences.</div>
 <div class="js-login-wrapper">
-<button class="c-btn p-home__discover__btn js-login__btn claim-button" data-scroll-to-top="">
+<button class="c-btn p-home__discover__btn js-login__btn connect-wallet" data-scroll-to-top="">
 <img alt="" class="p-home__discover__metamask u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect
 </button>
@@ -672,7 +679,7 @@ Connect
 <h3 class="p-home__discover__item__title">Monitor</h3>
 <div class="p-home__discover__text">Real-time security updates &amp; easily monitor your portfolio.</div>
 <div class="js-login-wrapper">
-<button class="c-btn p-home__discover__btn js-login__btn claim-button" data-scroll-to-top="">
+<button class="c-btn p-home__discover__btn js-login__btn connect-wallet" data-scroll-to-top="">
 <img alt="" class="p-home__discover__metamask u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect
 </button>
@@ -689,7 +696,7 @@ Quick Buy and Sell
 </h3>
 <div class="p-home__discover__text">Trade faster with Photon with a speed advantage for every transaction.</div>
 <div class="js-login-wrapper">
-<button class="c-btn p-home__discover__btn js-login__btn claim-button" data-scroll-to-top="">
+<button class="c-btn p-home__discover__btn js-login__btn connect-wallet" data-scroll-to-top="">
 <img alt="" class="p-home__discover__metamask u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect
 </button>
@@ -718,7 +725,7 @@ Start Trading
 In Less Than 30 Secs
 </h2>
 <div class="js-login-wrapper">
-<button class="c-btn p-home__btn js-login__btn claim-button">
+<button class="c-btn p-home__btn js-login__btn connect-wallet">
 <img alt="" class="u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect wallet
 </button>
@@ -726,7 +733,7 @@ Connect wallet
 </div>
 <div class="js-signup__install u-d-none">
 <div class="js-install-phantom u-font-size-s u-mb-m u-d-none">Install Phantom and connect your wallet to log in.</div>
-<button class="c-btn p-home__btn js-login-deeplink u-d-none claim-button">
+<button class="c-btn p-home__btn js-login-deeplink u-d-none connect-wallet">
 <img alt="" class="u-mr-xxs" src="phantom-588ee0fea56306baed4d91de7ac275f14e2929ae728e3b4031cb2a3b76c77324.svg">
 Connect wallet
 </button>
